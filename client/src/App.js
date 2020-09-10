@@ -1,11 +1,11 @@
 import React from 'react';
-import Calendar from "./components/Calendar";
+import PersistentDrawerLeft from "./components/Drawer";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Calendar/>
+      <PersistentDrawerLeft/>
     </div>
   );
 }
