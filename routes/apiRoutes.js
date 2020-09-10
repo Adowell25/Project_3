@@ -17,8 +17,6 @@ module.exports = function (app) {
 
             })
     });
-Adowell25
-};
 
 
 
@@ -69,8 +67,4 @@ Adowell25
 
             })
     });
-
-
-
 };
- master
