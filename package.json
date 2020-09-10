@@ -4,16 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+
+    "@material-ui/core": "^4.11.0",
+
     "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.0",
     "mongoose": "^5.10.2",
-    "nodemon": "^2.0.4"
-  }
+    "nodemon": "^2.0.4",
+    "react-router-dom": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adowell25/Project_3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adowell25/Project_3/issues"
+  },
+  "homepage": "https://github.com/Adowell25/Project_3#readme",
+  "devDependencies": {}
 }

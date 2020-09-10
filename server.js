@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 //const routes = require("./routes/apiRoutes");
+
+
 const app = express();
 
 var axios = require('axios')
@@ -13,13 +15,15 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
-//app.use("/api", routes);
+
+//Add api routes to app
+require("./routes/apiRoutes")(app);
+
 
 // Connect to the Mongo DB
 //mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/calm-coast-29141";
-mongoose.connect(MONGODB_URI);
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/db";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongodb connection error"))
