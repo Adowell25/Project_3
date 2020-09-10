@@ -8,6 +8,8 @@ function App() {
       <PersistentDrawerLeft/>
     </div>
   );
+
+  
 }
 
 export default App;
