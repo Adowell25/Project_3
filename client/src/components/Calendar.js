@@ -1,13 +1,18 @@
 import React from 'react'
 import FullCalendar, { preventContextMenu } from '@fullcalendar/react'//, { getRectCenter } 
 import dayGridPlugin from '@fullcalendar/daygrid'
- Adowell25
-import interactionPlugin from '@fullcalendar/interaction';
+
+import interactionPlugin, { Draggable} from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
 import axios from 'axios'
 
 import getEventBriteEvents from "../services/api.js"
- master
+
+document.addEventListener('DOMContentLoaded', function() {
+  let draggableEl = document.getElementById('mydraggable');
+  let calendarEl = document.getElementById('mycalendar');
+})
+
 
  class Calendar extends React.Component {
 
@@ -34,12 +39,19 @@ import getEventBriteEvents from "../services/api.js"
       <FullCalendar
         dateClick={this.handleDateClick}
         plugins={[ dayGridPlugin, interactionPlugin, listPlugin ]}
+        droppable = {true}
+        selectable = "true"
+        dayMaxEvents = {3}
         initialView="dayGridMonth"
         headerToolbar={{
           left: 'prev,next today',
-          center: 'addEventButton',
+          center: 'title',
           right: 'dayGridMonth, dayGridWeek, dayGridDay, listWeek'
         }}
+
+        
+
+        
 
         
         //pop-up click event for event title and start time
@@ -51,12 +63,18 @@ import getEventBriteEvents from "../services/api.js"
         }
 
         events = {[
-          { title: 'event 1', date: '2020-09-03', backgroundColor: 'red'},
+          { title: 'event 1', date: '2020-09-13', backgroundColor: 'red'},
+          { title: 'event 2', date: '2020-09-13', backgroundColor: 'red'},
+          { title: 'event 3', date: '2020-09-13', backgroundColor: 'red'},
+          { title: 'event 4', date: '2020-09-13', backgroundColor: 'red'},
           
         ]}
-
       />
+
     )
+
+    
+
   }
   //date pop-up click event
   handleDateClick = (arg) => { // bind with an arrow function
@@ -67,8 +85,5 @@ import getEventBriteEvents from "../services/api.js"
 
  }
 
-  
-
 
 export default Calendar
-
