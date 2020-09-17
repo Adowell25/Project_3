@@ -49,7 +49,7 @@
   text-align: left;
   padding-top: 8px;
   padding-bottom: 8px;
-  color:black;
+  color:rgba(0,0,0,.54);
   border: 0;
   cursor: pointer;
   margin: 8px;
@@ -75,11 +75,10 @@
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.05);
 }
-
-.MuiTypography-displayBlock,
-.MuiSvgIcon-root{
-  color:black;
+.MuiListItem-root{
+  color:rgba(0,0,0,.54);
 }
+
 
 
 

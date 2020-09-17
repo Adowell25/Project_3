@@ -16,8 +16,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import EventIcon from '@material-ui/icons/AcUnit';
-import MailIcon from '@material-ui/icons/Mail';
-import Calendar from './Calendar'
+import Calendar from './Calendar';
 import Loginbutton from "./loginbutton";
 import Logoutbutton from "./logoutbutton";
 
@@ -141,12 +140,8 @@ export default function PersistentDrawerLeft() {
           ))}
         </List>
         <Divider />
-
-        
-        {/* <EventIcon /> */}
         <Loginbutton />
         <Divider />
-        {/* <EventIcon /> */}
         <Logoutbutton />
        
 
