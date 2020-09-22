@@ -1,19 +1,16 @@
 import React from 'react';
 import PersistentDrawerLeft from "./components/Drawer";
 import './App.css';
-import Loginbutton from "./components/loginbutton";
-import Logoutbutton from "./components/logoutbutton";
+// import Router from "../../routes/htmlRoutes"
+// import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      
       <PersistentDrawerLeft/>
-      <Loginbutton/>
-      <Logoutbutton/>
     </div>
   );
-
-  
 }
 
 export default App;

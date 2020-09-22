@@ -15,9 +15,10 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import Calendar from './Calendar'
+import EventIcon from '@material-ui/icons/AcUnit';
+import Calendar from './Calendar';
+import Loginbutton from "./loginbutton";
+import Logoutbutton from "./logoutbutton";
 
 const drawerWidth = 240;
 
@@ -111,7 +112,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-          ★<bold>View Events</bold>★
+            <bold>View Events</bold>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -131,22 +132,19 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Events'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon><EventIcon /></ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <Loginbutton />
+        <Divider />
+        <Logoutbutton />
+       
+
       </Drawer>
       <main
         className={clsx(classes.content, {
