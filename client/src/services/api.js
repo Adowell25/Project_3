@@ -32,10 +32,5 @@ export default function getEventBriteEvents() {
                     var responses_json = responses.map(response => response.json());
                     return Promise.all(responses_json);
                 })
-
-
         });
-
-
-
 }
